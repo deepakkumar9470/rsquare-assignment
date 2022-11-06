@@ -1,0 +1,105 @@
+.registerContainer{
+    display: flex;
+    height: 100vh;
+   
+    .left{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color:#FFFFFF;
+        padding: 5.4rem 1rem;
+        flex: 2;
+        background-image: url('../images/rectangle.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        h2{
+            font-family: Manrope;
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 62px;
+            letter-spacing: 0px;
+            text-align: center;
+            margin-bottom: 2rem;
+
+        }
+        p{
+            height: 38px;
+            width: 307px;
+            left: 91.0000228881836px;
+            top: 290px;
+            border-radius: nullpx;
+            display: flex;
+            align-items: center;
+            font-family: Manrope;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: center;
+
+        }
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+        padding: 5.4rem 1rem;
+        flex-direction: column;
+        flex: 4;
+       
+        form{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+
+            .leftInputs{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .rightInputs{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            
+            h2{
+                font-family: Inter;
+                font-size: 36px;
+                font-weight: 600;
+                line-height: 44px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 1re;
+                
+            }
+            p{
+                font-family: Inter;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 2re;
+                
+            }
+
+          .inputs{
+             display: flex;
+             align-items: center;
+            
+            input{
+                
+            }
+          }
+        }
+
+    }
+
+    
+}
