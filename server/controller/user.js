@@ -3,13 +3,12 @@ import Token from '../models/Token.js'
 import sendEmail from '../utils/sendMail.js'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
-import { json } from 'express'
 import crypto from 'crypto'
 
 
 export const register = async (req,res) =>{
       
-    const user = User.findOne({email:email})
+    const user = User.findOne({email})
     if(!user) return res.status(400).json('User does not exist')
 
     try {
@@ -112,3 +111,5 @@ export const logout = (req,res) =>{
         sameSite:  'none'
     }).status(200).json('User logged out')
 }
+
+

@@ -22,7 +22,7 @@
             text-align: center;
             margin-bottom: 2rem;
 
-        }
+  }
         p{
             height: 38px;
             width: 307px;
@@ -46,28 +46,19 @@
         align-items: center;
         padding: 5.4rem 1rem;
         flex-direction: column;
-        flex: 4;
+        flex: 5;
        
         form{
             display: flex;
             align-items: center;
             flex-direction: column;
-            justify-content: space-between;
-            gap: 20px;
+            // justify-content: space-between;
+            // gap: 20px;
 
-            .leftInputs{
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
+            .leftSide, .rightSide{
+                flex: 1;
+
             }
-            .rightInputs{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-            }
-            
             h2{
                 font-family: Inter;
                 font-size: 36px;
@@ -88,15 +79,40 @@
                 margin-bottom: 2re;
                 
             }
+            .inputs{
+                width: 600px;
+                label{
+                    font-size: 14px;
+                    color: #474444;
+                    padding: 0.5rem  0;
+                    margin-bottom: 0.8rem;
+                    font-family: 'Manrope', sans-serif;
+                }
+               input{
+                  width: 300px; 
+                  outline: none;
+                  padding: 10px, 16px, 10px, 16px;
+                  color: #474444;
+                  border: none;
+                  border-radius: 5px;
+                  border: 1px solid #6360AB;
+                  display: flex;
+                  font-family: 'Inter', sans-serif;
+                  margin-bottom: 0.5rem;
+                  align-items: center;
+               }
+             }
 
-          .inputs{
-             display: flex;
-             align-items: center;
-            
-            input{
+             buttton{
+                height: 48px;
+                width: 305px;
+                left: 623px;
+                top: 560px;
+                border-radius: 4px;
+                padding: 16px 64px 16px 64px;
                 
-            }
-          }
+             }
+        
         }
 
     }
