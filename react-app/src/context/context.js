@@ -1,4 +1,4 @@
-import {useState,useEffect ,createContext} from 'react'
+import { useState, useEffect, createContext } from 'react'
 
 import axios from 'axios'
 
@@ -7,42 +7,33 @@ export const AuthContext = createContext()
 
 
 
-export const AuthContextProvider = ({children}) =>{
+export const AuthContextProvider = ({ children }) => {
 
-    const [currentUser,setcurrentUser] = useState(
-        JSON.parse(localStorage.getItem('user')) || null
-    )
+  const [currentUser, setcurrentUser] = useState(
+    JSON.parse(localStorage.getItem('user')) || null
+  )
 
 
-    const login = async () =>{
-         
+  const login = async (inputs) => {
+    try {
+      const res = await axios.post('http://localhost:5000/api/auth/login', inputs, {
+        withCredentials: true
+      })
+      // return res.data
+      setcurrentUser(res.data)
+    } catch (error) {
+      console.log(error)
     }
+  }
 
-    // const getAllFiles = async()=>{
-    //    try {
-    //        const res = await axios.get(`${url}/upload/getallfiles`)
-    //        return res.data
-    //    } catch (error) {
-    //     console.log(error)
-    //    }
-    // }
 
-    // const postAllFiles = async(data)=>{
-    //    try {
-    //        return res = await axios.get(`${url}/upload/mul`)
-    //     
-    //    } catch (error) {
-    //     console.log(error)
-    //    }
-    // }
+  useEffect(() => {
+    localStorage.setItem('user', JSON.stringify(currentUser))
+  }, [currentUser])
 
-useEffect(() => {
-  localStorage.setItem('user',JSON.stringify(currentUser))
-}, [currentUser])
-
-    return(
-         <AuthContext.Provider value={{currentUser,login}}>
-            {children}
-         </AuthContext.Provider>
-    )
+  return (
+    <AuthContext.Provider value={{ currentUser, login }}>
+      {children}
+    </AuthContext.Provider>
+  )
 }

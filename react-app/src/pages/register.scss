@@ -1,19 +1,19 @@
-.registerContainer{
+.registerContainer {
     display: flex;
     height: 100vh;
-   
-    .left{
+
+    .left {
         display: flex;
         align-items: center;
         flex-direction: column;
-        color:#FFFFFF;
+        color: #FFFFFF;
         padding: 5.4rem 1rem;
         flex: 2;
         background-image: url('../images/rectangle.png');
         background-repeat: no-repeat;
         background-size: cover;
 
-        h2{
+        h2 {
             font-family: Manrope;
             font-size: 52px;
             font-weight: 700;
@@ -22,8 +22,9 @@
             text-align: center;
             margin-bottom: 2rem;
 
-  }
-        p{
+        }
+
+        p {
             height: 38px;
             width: 307px;
             left: 91.0000228881836px;
@@ -41,25 +42,27 @@
         }
     }
 
-    .right{
+    .right {
         display: flex;
         align-items: center;
         padding: 5.4rem 1rem;
         flex-direction: column;
         flex: 5;
-       
-        form{
+
+        form {
             display: flex;
             align-items: center;
             flex-direction: column;
             // justify-content: space-between;
             // gap: 20px;
 
-            .leftSide, .rightSide{
+            .leftSide,
+            .rightSide {
                 flex: 1;
 
             }
-            h2{
+
+            h2 {
                 font-family: Inter;
                 font-size: 36px;
                 font-weight: 600;
@@ -67,9 +70,10 @@
                 letter-spacing: 0em;
                 text-align: left;
                 margin-bottom: 1re;
-                
+
             }
-            p{
+
+            p {
                 font-family: Inter;
                 font-size: 14px;
                 font-weight: 400;
@@ -77,45 +81,48 @@
                 letter-spacing: 0em;
                 text-align: left;
                 margin-bottom: 2re;
-                
+
             }
-            .inputs{
+
+            .inputs {
                 width: 600px;
-                label{
+
+                label {
                     font-size: 14px;
                     color: #474444;
-                    padding: 0.5rem  0;
+                    padding: 0.5rem 0;
                     margin-bottom: 0.8rem;
                     font-family: 'Manrope', sans-serif;
                 }
-               input{
-                  width: 300px; 
-                  outline: none;
-                  padding: 10px, 16px, 10px, 16px;
-                  color: #474444;
-                  border: none;
-                  border-radius: 5px;
-                  border: 1px solid #6360AB;
-                  display: flex;
-                  font-family: 'Inter', sans-serif;
-                  margin-bottom: 0.5rem;
-                  align-items: center;
-               }
-             }
 
-             buttton{
+                input {
+                    width: 300px;
+                    outline: none;
+                    padding: 10px, 16px, 10px, 16px;
+                    color: #474444;
+                    border: none;
+                    border-radius: 5px;
+                    border: 1px solid #6360AB;
+                    display: flex;
+                    font-family: 'Inter', sans-serif;
+                    margin-bottom: 0.5rem;
+                    align-items: center;
+                }
+            }
+
+            buttton {
                 height: 48px;
                 width: 305px;
                 left: 623px;
                 top: 560px;
                 border-radius: 4px;
                 padding: 16px 64px 16px 64px;
-                
-             }
-        
+
+            }
+
         }
 
     }
 
-    
+
 }

@@ -1,54 +1,48 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 import './home.scss'
 import bg from '../../images/bg.png'
-import axios from 'axios'
-const url = `http://localhost:5000/api/auth`
+import { getMultipleFiles } from '../../services/api'
+
 
 const Home = () => {
-  const [myFiles,setFiles] = useState([])
+  const [myFiles, setFiles] = useState([])
 
-  // useEffect(() => {
-  //  const fetchData =async  () =>{
-  //   try {
-  //     const res = await axios.get('http://localhost:5000/api/auth/getfiles')
-  //     console.log(res.data)
-  //     setFiles(res.data)
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  //  }
-  //  fetchData()
-  // }, [])
-
-   useEffect(() => {
-    const multipleFileUpload = async () =>{
+  useEffect(() => {
+    const getFilesData = async () => {
       try {
-          const {data} = await axios.get(`${url}/upload/getfiles`)
-          // return res.data
-          setFiles(data)
+        const fileLists = await getMultipleFiles()
+        setFiles(fileLists)
       } catch (error) {
-       console.log(error)
+        console.log(error)
       }
- }
- multipleFileUpload()
-   }, [])
-   
+    }
+    getFilesData()
+  }, [])
 
-  
+
   return (
     <div className="home">
-         <img src={bg} alt="cock" />
-         
-         <div className="imageContainer">
-         {
-          myFiles?.map((val,i)=>(
+      <img src={bg} alt="cock" />
+
+      <div className="imageContainer">
+        {
+          myFiles?.map((val, i) => (
             <div key={val._id}>
-              <img src={`http://localhost:5000/${val.fileName}`} width="100px" height="100px" alt="g" />
+              <div className="row">
+                {
+                  val.files.map((item, i) => (
+                    <div>
+                      <img src='https://images.pexels.com/photos/11757303/pexels-photo-11757303.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load' alt="myImage" />
+
+                    </div>
+                  ))
+                }
+              </div>
             </div>
           ))
-         } 
-         </div>
+        }
+      </div>
     </div>
   )
 }
